@@ -109,7 +109,7 @@ public class ItemActivity extends SherlockActivity {
 					}
 					return false;
 				}
-			}).setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM);
+			});
 		
 		menu.add(R.string.main_ui_ctx_copy)
 			.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
