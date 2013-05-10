@@ -43,7 +43,7 @@ public class DonateActivity extends SherlockActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_donate);
 		getSupportActionBar().setBackgroundDrawable(new ColorDrawable(0xFF2F5577));
-		getSupportActionBar().setTitle(getString(R.string.login_title));
+		getSupportActionBar().setTitle(getString(R.string.donate_title));
 		getSupportActionBar().setDisplayUseLogoEnabled(false);   
 		getSupportActionBar().setDisplayShowHomeEnabled(false);
 		getSupportActionBar().setDisplayShowTitleEnabled(true);
