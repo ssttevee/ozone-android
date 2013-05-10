@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ssttevee.cloudapp.widget.ListFooter xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="6dp"
+    android:paddingBottom="6dp"
+    android:background="@drawable/abs__list_selector_holo_light" >
+    
+    <TextView
+        android:id="@+id/indicator_text"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+	    android:gravity="center"
+	    android:text="@string/ui_more" />
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone"
+        style="?android:attr/progressBarStyleSmall" />
+    
+</com.ssttevee.cloudapp.widget.ListFooter>

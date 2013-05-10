@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ssttevee.cloudapp.widget.CheckableRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp"
+    android:background="@drawable/abs__list_selector_holo_light" >
+    
+    <CheckBox
+        android:id="@+id/item_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:checkable="false"
+        android:focusable="false"
+        android:paddingLeft="16dp" />
+	        
+    <ImageView
+        android:id="@+id/item_type"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_toRightOf="@id/item_checkbox"
+        android:layout_marginLeft="-16dp"
+        android:layout_marginRight="8dp"
+        android:layout_centerVertical="true"
+        android:contentDescription="@string/main_slider_all"
+        android:scaleType="fitXY"
+        android:src="@drawable/type_all" />
+	        
+    <ImageView
+        android:id="@+id/item_private"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="-8dp"
+        android:layout_marginBottom="-8dp"
+        android:padding="8dp"
+        android:background="@drawable/abs__list_selector_holo_light"
+        android:clickable="true"
+        android:contentDescription="@string/main_slider_all"
+        android:scaleType="centerInside"
+        android:src="@drawable/lv_icon_unlock" />
+        
+    <TextView
+        android:id="@+id/item_counter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+		android:layout_toLeftOf="@id/item_private"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="8dp"
+        android:textIsSelectable="false"
+        android:text="213" />
+        
+    <TextView
+        android:id="@+id/item_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/item_type"
+        android:layout_toLeftOf="@id/item_counter"
+        android:layout_centerVertical="true"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:singleLine="true"
+        android:textIsSelectable="false"
+        android:text="name.ext" />
+    
+</com.ssttevee.cloudapp.widget.CheckableRelativeLayout>

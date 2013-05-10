@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_body" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+        
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+    		android:paddingTop="16dp"
+    		android:paddingLeft="16dp"
+    		android:paddingBottom="8dp"
+            android:textSize="18sp"
+            android:text="@string/main_slider_library" />
+        
+        <LinearLayout
+            android:id="@+id/filter_all"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+    		android:paddingTop="8dp"
+    		android:paddingLeft="16dp"
+    		android:paddingBottom="8dp"
+	        android:background="@drawable/abs__list_selector_holo_light"
+	        android:clickable="true"
+	        android:onClick="onFilterClicked"
+	        android:orientation="horizontal" >
+	        
+            <ImageView
+		        android:layout_width="wrap_content"
+		        android:layout_height="match_parent"
+    			android:paddingRight="8dp"
+		        android:scaleType="centerInside"
+		        android:src="@drawable/type_all"
+		        android:contentDescription="@string/main_slider_all" />
+        
+	        <TextView
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:textStyle="bold"
+	            android:text="@string/main_slider_all" />
+            
+        </LinearLayout>
+        
+        <LinearLayout
+            android:id="@+id/filter_popular"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+    		android:paddingTop="8dp"
+    		android:paddingLeft="16dp"
+    		android:paddingBottom="8dp"
+	        android:background="@drawable/abs__list_selector_holo_light"
+	        android:clickable="true"
+	        android:onClick="onFilterClicked"
+	        android:orientation="horizontal" >
+	        
+            <ImageView
+		        android:layout_width="wrap_content"
+		        android:layout_height="match_parent"
+    			android:paddingRight="8dp"
+		        android:scaleType="centerInside"
+		        android:src="@drawable/type_popular"
+		        android:contentDescription="@string/main_slider_popular" />
+        
+	        <TextView
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="@string/main_slider_popular" />
+            
+        </LinearLayout>
+        
+        <LinearLayout
+            android:id="@+id/filter_image"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+    		android:paddingTop="8dp"
+    		android:paddingLeft="16dp"
+    		android:paddingBottom="8dp"
+	        android:background="@drawable/abs__list_selector_holo_light"
+	        android:clickable="true"
+	        android:onClick="onFilterClicked"
+	        android:orientation="horizontal" >
+	        
+            <ImageView
+		        android:layout_width="wrap_content"
+		        android:layout_height="match_parent"
+    			android:paddingRight="8dp"
+		        android:scaleType="centerInside"
+		        android:src="@drawable/type_image"
+		        android:contentDescription="@string/main_slider_image" />
+        
+	        <TextView
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="@string/main_slider_image" />
+            
+        </LinearLayout>
+        
+        <LinearLayout
+            android:id="@+id/filter_bookmark"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+    		android:paddingTop="8dp"
+    		android:paddingLeft="16dp"
+    		android:paddingBottom="8dp"
+	        android:background="@drawable/abs__list_selector_holo_light"
+	        android:clickable="true"
+	        android:onClick="onFilterClicked"
+	        android:orientation="horizontal" >
+	        
+            <ImageView
+		        android:layout_width="wrap_content"
+		        android:layout_height="match_parent"
+    			android:paddingRight="8dp"
+		        android:scaleType="centerInside"
+		        android:src="@drawable/type_bookmark"
+		        android:contentDescription="@string/main_slider_bookmark" />
+        
+	        <TextView
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="@string/main_slider_bookmark" />
+            
+        </LinearLayout>
+        
+        <LinearLayout
+            android:id="@+id/filter_text"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+    		android:paddingTop="8dp"
+    		android:paddingLeft="16dp"
+    		android:paddingBottom="8dp"
+	        android:background="@drawable/abs__list_selector_holo_light"
+	        android:clickable="true"
+	        android:onClick="onFilterClicked"
+	        android:orientation="horizontal" >
+	        
+            <ImageView
+		        android:layout_width="wrap_content"
+		        android:layout_height="match_parent"
+    			android:paddingRight="8dp"
+		        android:scaleType="centerInside"
+		        android:src="@drawable/type_text"
+		        android:contentDescription="@string/main_slider_text" />
+        
+	        <TextView
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="@string/main_slider_text" />
+            
+        </LinearLayout>
+        
+        <LinearLayout
+            android:id="@+id/filter_archive"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+    		android:paddingTop="8dp"
+    		android:paddingLeft="16dp"
+    		android:paddingBottom="8dp"
+	        android:background="@drawable/abs__list_selector_holo_light"
+	        android:clickable="true"
+	        android:onClick="onFilterClicked"
+	        android:orientation="horizontal" >
+	        
+            <ImageView
+		        android:layout_width="wrap_content"
+		        android:layout_height="match_parent"
+    			android:paddingRight="8dp"
+		        android:scaleType="centerInside"
+		        android:src="@drawable/type_archive"
+		        android:contentDescription="@string/main_slider_archive" />
+        
+	        <TextView
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="@string/main_slider_archive" />
+            
+        </LinearLayout>
+        
+        <LinearLayout
+            android:id="@+id/filter_audio"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+    		android:paddingTop="8dp"
+    		android:paddingLeft="16dp"
+    		android:paddingBottom="8dp"
+	        android:background="@drawable/abs__list_selector_holo_light"
+	        android:clickable="true"
+	        android:onClick="onFilterClicked"
+	        android:orientation="horizontal" >
+	        
+            <ImageView
+		        android:layout_width="wrap_content"
+		        android:layout_height="match_parent"
+    			android:paddingRight="8dp"
+		        android:scaleType="centerInside"
+		        android:src="@drawable/type_audio"
+		        android:contentDescription="@string/main_slider_audio" />
+        
+	        <TextView
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="@string/main_slider_audio" />
+            
+        </LinearLayout>
+        
+        <LinearLayout
+            android:id="@+id/filter_video"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+    		android:paddingTop="8dp"
+    		android:paddingLeft="16dp"
+    		android:paddingBottom="8dp"
+	        android:background="@drawable/abs__list_selector_holo_light"
+	        android:clickable="true"
+	        android:onClick="onFilterClicked"
+	        android:orientation="horizontal" >
+	        
+            <ImageView
+		        android:layout_width="wrap_content"
+		        android:layout_height="match_parent"
+    			android:paddingRight="8dp"
+		        android:scaleType="centerInside"
+		        android:src="@drawable/type_video"
+		        android:contentDescription="@string/main_slider_video" />
+        
+	        <TextView
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="@string/main_slider_video" />
+            
+        </LinearLayout>
+        
+        <LinearLayout
+            android:id="@+id/filter_unknown"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+    		android:paddingTop="8dp"
+    		android:paddingLeft="16dp"
+    		android:paddingBottom="8dp"
+	        android:background="@drawable/abs__list_selector_holo_light"
+	        android:clickable="true"
+	        android:onClick="onFilterClicked"
+	        android:orientation="horizontal" >
+	        
+            <ImageView
+		        android:layout_width="wrap_content"
+		        android:layout_height="match_parent"
+    			android:paddingRight="8dp"
+		        android:scaleType="centerInside"
+		        android:src="@drawable/type_unknown"
+		        android:contentDescription="@string/main_slider_unknown" />
+        
+	        <TextView
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="@string/main_slider_unknown" />
+            
+        </LinearLayout>
+        
+        <LinearLayout
+            android:id="@+id/filter_trash"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+    		android:paddingTop="8dp"
+    		android:paddingLeft="16dp"
+    		android:paddingBottom="8dp"
+	        android:background="@drawable/abs__list_selector_holo_light"
+	        android:clickable="true"
+	        android:onClick="onFilterClicked"
+	        android:orientation="horizontal" >
+	        
+            <ImageView
+		        android:layout_width="wrap_content"
+		        android:layout_height="match_parent"
+    			android:paddingRight="8dp"
+		        android:scaleType="centerInside"
+		        android:src="@drawable/type_trash"
+		        android:contentDescription="@string/main_slider_trash" />
+        
+	        <TextView
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="@string/main_slider_trash" />
+            
+        </LinearLayout>
+        
+    </LinearLayout>
+
+</ScrollView>

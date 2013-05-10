@@ -1,0 +1,185 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFEBEBEB"
+    android:orientation="vertical"
+    tools:context=".MainActivity" >
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="#FF2F5577" >
+        
+        <TextView
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_centerVertical="true"
+	        android:layout_marginLeft="16dp"
+	        android:textColor="#FFFFFFFF"
+	        android:textSize="18sp"
+	        android:text="New Drop" />
+        
+    </RelativeLayout>
+    
+    <ViewFlipper
+        android:id="@+id/new_drop_flipper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" > 
+        
+        <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="vertical" >
+ 
+		    <LinearLayout style="@style/CloudApp.ButtonBar"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:background="@drawable/bg_bar_button"
+		        android:orientation="horizontal">
+		 
+		        <Button
+		            android:id="@+id/btn_new_bookmark"
+		            android:layout_width="0dp"
+		            android:layout_height="wrap_content"
+		            android:layout_weight="1"
+		            android:background="@drawable/abs__list_selector_holo_light"
+		            android:text="@string/new_drop_title_bookmark" />
+		    </LinearLayout>
+ 
+		    <LinearLayout style="@style/CloudApp.ButtonBar"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:background="@drawable/bg_bar_button"
+		        android:orientation="horizontal">
+		 
+		        <Button
+		            android:id="@+id/btn_new_file"
+		            android:layout_width="0dp"
+		            android:layout_height="wrap_content"
+		            android:layout_weight="1"
+		            android:background="@drawable/abs__list_selector_holo_light"
+		            android:text="@string/new_drop_title_file" />
+		    </LinearLayout>
+            
+        </LinearLayout>
+        
+        <RelativeLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content" >
+            
+            <TextView
+                android:id="@+id/upload_progress_precent"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignParentRight="true"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="8dp"
+		        android:text="@string/hello_world" />
+            
+            <TextView
+                android:id="@+id/upload_progress_text"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignParentLeft="true"
+		        android:layout_toLeftOf="@id/upload_progress_precent"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"
+		        android:text="@string/hello_world" />
+		    
+            <ProgressBar
+                android:id="@+id/upload_progress_bar"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_below="@id/upload_progress_text"
+                style="?android:attr/progressBarStyleHorizontal" />
+            
+            <TextView
+                android:id="@+id/upload_progress_numbers"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignParentRight="true"
+                android:layout_marginRight="16dp"
+                android:layout_below="@id/upload_progress_bar"
+                android:paddingBottom="8dp"
+		        android:text="@string/hello_world" />
+            
+        </RelativeLayout> 
+        
+        <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:visibility="gone"
+	        android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+	        	android:layout_marginTop="8dp"
+	        	android:layout_marginLeft="8dp"
+	        	android:layout_marginRight="8dp"
+                android:text="@string/new_drop_ui_new_bookmark" />
+            
+            <EditText
+                android:id="@+id/input_bookmark_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+	        	android:layout_marginTop="8dp"
+	        	android:layout_marginLeft="8dp"
+	        	android:layout_marginRight="8dp"
+	        	android:layout_marginBottom="8dp"
+                android:hint="@string/new_drop_ui_new_bookmark_name_hint"
+                android:singleLine="true"
+                android:inputType="text" />
+            
+            <EditText
+                android:id="@+id/input_bookmark_url"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+	        	android:layout_marginLeft="8dp"
+	        	android:layout_marginRight="8dp"
+	        	android:layout_marginBottom="8dp"
+                android:hint="@string/new_drop_ui_new_bookmark_hint"
+                android:singleLine="true"
+                android:inputType="textUri" />
+ 
+		    <LinearLayout style="@style/CloudApp.ButtonBar"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:background="@drawable/bg_bar_button"
+		        android:orientation="horizontal">
+		 
+		        <Button
+		            android:id="@+id/btn_add_bookmark"
+		            android:layout_width="0dp"
+		            android:layout_height="wrap_content"
+		            android:layout_weight="1"
+		            android:background="@drawable/abs__list_selector_holo_light"
+		            android:text="@string/new_drop_title_bookmark" />
+		    </LinearLayout>
+            
+        </LinearLayout> 
+        
+    </ViewFlipper>
+ 
+    <LinearLayout style="@style/CloudApp.ButtonBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_bar_button"
+        android:orientation="horizontal">
+ 
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/abs__list_selector_holo_light"
+            android:text="@string/ui_cancel" />
+    </LinearLayout>
+
+</LinearLayout>

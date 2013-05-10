@@ -1,0 +1,54 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ItemActivity" >
+
+    <ImageView
+        android:id="@+id/item_thumb"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:scaleType="centerCrop"
+        android:contentDescription="@string/item_thumb_desc"
+        android:src="@drawable/thumb_unknown" />
+    
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/item_thumb" >
+        
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp" >
+
+		    <TextView
+		        android:id="@+id/textView1"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignParentLeft="true"
+		        android:layout_alignParentTop="true"
+		        android:layout_marginRight="16dp"
+		        android:gravity="right"
+		        android:lineSpacingExtra="3dp"
+		        android:text="@string/item_ui_detail_inds"
+		        android:textStyle="bold" />
+		
+		    <TextView
+		        android:id="@+id/item_details"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignParentRight="true"
+		        android:layout_alignParentTop="true"
+		        android:layout_toRightOf="@+id/textView1"
+		        android:lineSpacingExtra="3dp"
+		        android:text="@string/item_ui_detail_inds" />
+
+		</RelativeLayout>
+	        
+    </ScrollView>
+
+</RelativeLayout>
