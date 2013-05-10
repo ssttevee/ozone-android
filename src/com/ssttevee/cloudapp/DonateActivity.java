@@ -151,7 +151,8 @@ public class DonateActivity extends SherlockActivity {
             else {
                 System.out.println("Error while consuming: " + result);
             }
-            updateUi();
+            
+            thankDonator();
             setWaitScreen(false);
         }
     };
@@ -207,7 +208,7 @@ public class DonateActivity extends SherlockActivity {
         bld.create().show();
     }
     
-    public void updateUi() {
+    public void thankDonator() {
         new AlertDialog.Builder(this)
         	.setMessage(getString(R.string.donate_thanks))
         	.setNeutralButton("OK", new OnClickListener() {
