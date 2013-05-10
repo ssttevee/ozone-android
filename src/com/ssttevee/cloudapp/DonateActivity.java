@@ -106,7 +106,7 @@ public class DonateActivity extends SherlockActivity {
             for (String sku : skuList) {
             	if(inventory.hasPurchase(sku)) {
 	                Purchase p = inventory.getPurchase(sku);
-	                if (verifyDeveloperPayload(p)) {
+	                if (mApp.verifyDeveloperPayload(p)) {
 	                    mHelper.consumeAsync(inventory.getPurchase(sku), mConsumeFinishedListener);
 	                    return;
 	                }
@@ -125,7 +125,7 @@ public class DonateActivity extends SherlockActivity {
                 setWaitScreen(false);
                 return;
             }
-            if (!verifyDeveloperPayload(purchase)) {
+            if (!mApp.verifyDeveloperPayload(purchase)) {
                 complain("Error purchasing. Authenticity verification failed.");
                 setWaitScreen(false);
                 return;
@@ -185,10 +185,6 @@ public class DonateActivity extends SherlockActivity {
 	    }
 	    return super.onKeyDown(keyCode, event);
 	}
-    
-    public boolean verifyDeveloperPayload(Purchase p) {
-        return mApp.payload.equals(p.getDeveloperPayload());
-    }
     
     public void setWaitScreen(boolean set) {
         if(set) mProgDiag.show();

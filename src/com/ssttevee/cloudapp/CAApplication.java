@@ -2,6 +2,7 @@ package com.ssttevee.cloudapp;
 
 import com.cloudapp.api.CloudApp;
 import com.cloudapp.api.model.CloudAppItem;
+import com.example.android.trivialdrivesample.util.Purchase;
 
 import android.app.Application;
 
@@ -14,5 +15,8 @@ public class CAApplication extends Application {
 	public CAApplication() {
 		// TODO Auto-generated constructor stub
 	}
+    public boolean verifyDeveloperPayload(Purchase p) {
+        return payload.equals(p.getDeveloperPayload());
+    }
 
 }
